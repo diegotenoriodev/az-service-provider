@@ -1,0 +1,32 @@
+<header class="page-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-4 pt-1">
+      <span class="material-icons menu-icon" (click)="toggleMenu()">
+        menu
+      </span>
+    </div>
+    <div class="col-4 text-center">
+      <a class="page-header-logo" [routerLink]="['/']">
+        <img src="assets/favicon.png" class="logo" />
+      </a>
+    </div>
+    <div *ngIf="!isAuthenticated()" class="col-4 actions">
+      <div class="col-12">
+        <a class="btn btn-md btn-default" [routerLink]="['login']">Sign in</a>
+      </div>
+      <div class="col-12">
+        <a class="register-link" [routerLink]="['/register']">Register</a>
+      </div>
+    </div>
+    <div *ngIf="isAuthenticated()" class="col-4 actions">
+      <div class="col-12">
+        <a class="btn btn-md btn-default" [routerLink]="['getquote']">Get a Quote</a>
+      </div>
+      <div class="col-12">
+        <a class="register-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<side-menu [(active)]="menuActive"></side-menu>

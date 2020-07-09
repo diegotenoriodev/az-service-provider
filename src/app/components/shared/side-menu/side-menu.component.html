@@ -1,0 +1,73 @@
+<div class="overlay" [class.active]="_active" (click)="toggleActive()">
+    <div class="side-menu" [class.active]="_active" (click)="preventDefault($event)">
+        <ul class="custom-scrollbar">
+            <!-- User Image -->
+            <li *ngIf="isAuthenticated">
+                <div class="user-image">
+                    <a href="#"><img src="{{userProfile?.imagePath}}" class="img-fluid flex-center"></a>
+                </div>
+            </li>
+            <!--/. User Image -->
+
+            <!-- Side navigation links -->
+            <li *ngIf="isAuthenticated">
+                <ul class="option-set">
+                    <li>
+                        <a>Account Details</a>
+                    </li>
+                    <li>
+                        <a>Messages</a>
+                    </li>
+                </ul>
+                <ul class="option-set">
+                    <li>
+                        <a>Provide a service</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Side navigation links -->
+            <li *ngIf="!isAuthenticated">
+                <ul class="option-set">
+                    <li>
+                        <a [routerLink]="['/login']" (click)="toggleActive()">Sign in</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/register']" (click)="toggleActive()">Register</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="option-set">
+                    <li>
+                        <a>Home</a>
+                    </li>
+                    <li>
+                        <a>Search</a>
+                    </li>
+                    <li>
+                        <a>About</a>
+                    </li>
+                    <li>
+                        <a>Contact Us</a>
+                    </li>
+                    <li>
+                        <a>Terms of Use</a>
+                    </li>
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+
+
+            <!--Social-->
+            <li>
+                <ul class="social">
+                    <li><a href="#" class="icons-sm fb-ic"><i class="fa fa-facebook-f"> </i></a></li>
+                    <li><a href="#" class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+                    <li><a href="#" class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+                </ul>
+            </li>
+            <!--/Social-->
+        </ul>
+    </div>
+</div>

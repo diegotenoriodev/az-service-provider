@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between category-menu">
+            <a class="category-link" *ngFor="let item of serviceProviderTypes" [routerLink]="['services/' + item.path]">
+                <div>
+                    <span class="material-icons">
+                        {{item.icon}}
+                    </span>
+                    <span class="text">{{item.name}}</span>
+                </div>
+            </a>
+        </nav>
+    </div>
+
+</div>

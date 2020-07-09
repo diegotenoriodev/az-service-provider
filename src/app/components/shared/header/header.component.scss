@@ -1,0 +1,41 @@
+@import "../../../styles/colors.scss";
+
+.menu-icon {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.page-header {
+    background-color: $base_color;
+    box-sizing: border-box;
+    padding: 5px 15px !important;
+
+    .logo {
+        height: 60px;
+    }
+
+    .material-icons {
+        color: $contrast_color;
+    }
+
+    .page-header-logo {
+        font-family: "ROBOTO", serif;
+        font-size: 2rem;
+        color: $contrast_color;
+    }
+
+    .page-header-logo:hover {
+        text-decoration: none;
+    }
+
+    .register-link {
+        font-size: 12px;
+        color: $contrast_color;
+        display: block;
+        margin-right: 2px;
+    }
+
+    .actions {
+        text-align: right;
+    }
+}

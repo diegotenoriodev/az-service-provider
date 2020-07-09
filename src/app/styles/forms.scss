@@ -1,0 +1,32 @@
+@import './colors.scss';
+
+.ng-valid[required],
+.ng-valid.required {
+    border: 1px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form) {
+    border: 1px solid #f791ad; /* red */
+}
+
+.ng-untouched {
+    border: 1px solid #ced4da!important;
+}
+
+form {
+    background-color: $contrast_color;
+    border-radius: 5px;
+
+    .alert, .error-message {
+        display: none;
+
+        ul, li {
+            margin-bottom: 3px;
+        }
+    }
+    .alert.show, .error-message.show {
+        display: block;
+        color: #a94442!important;
+    }
+    
+}

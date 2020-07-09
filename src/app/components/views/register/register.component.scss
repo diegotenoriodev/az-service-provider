@@ -1,0 +1,36 @@
+@import '../../../styles/colors.scss';
+
+.register-panel, .login-options {
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 5px;
+    background-color: $contrast_color;
+    color: $base_color;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 $overlay_color, 0 6px 20px 0 $overlay_color;
+
+    h5 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-action {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .g-signin2 {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+
+        .abcRioButton, .abcRioButtonLightBlue { 
+            width: 100%!important;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../../styles/colors.scss";
+
+.search-box {
+    width: 100%;
+
+    input:disabled {
+        background-color: $contrast_color;
+        cursor: pointer;
+    }
+
+    .input-text {
+        min-width: 500px;
+    }
+
+    .location {
+        padding-left: 28px;
+        background-image: url("../../../../assets/baseline_near_me_black_18dp.png");
+        background-repeat: no-repeat;
+        background-position-x: 6px;
+        background-position-y: 9px;
+        min-width: 200px;
+    }
+
+    .btn {
+        min-width: 120px;
+    }
+
+    @media (max-width: 768px) {
+        .list-box {
+            min-width: 100px;
+        }
+
+        .input-text {
+            min-width: 100px;
+        }
+
+        .btn {
+            min-width: 100px;
+        }
+    }
+}

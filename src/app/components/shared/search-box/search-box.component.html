@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="search-box form-inline justify-content-center align-items-center">
+        <div class="form-group mx-sm-1 mb-1">
+            <input type="text" placeholder="I am looking for..." name="txtSearch" id="txtSearch"
+                class="input-text form-control">
+        </div>
+        <div class="form-group mx-sm-1 mb-1">
+            <select name="listCategories" id="listCategories" class="form-control list-box">
+                <option class="main-option">All Categories</option>
+                <option *ngFor="let item of serviceProviderTypes | sortBy: 'asc':'name'">{{item.name}}</option>
+            </select>
+        </div>
+        <div class="form-group mx-sm-1 mb-1">
+            <input type="text" placeholder="Inform your location" name="sblistLocation" id="sblistLocation"
+                class="input-text list-box form-control location" value="{{locationName}}" (click)="openLocationPicker()">
+        </div>
+        <a class="btn btn-md btn-default-outline mx-sm-1 mb-1">Search</a>
+    </div>
+</div>
+<location-picker [(active)]="activeLocationPicker" [(location)]="_location"></location-picker>

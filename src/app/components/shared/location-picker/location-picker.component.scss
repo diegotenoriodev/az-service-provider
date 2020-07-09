@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.location-picker {
+    padding-top: 10px;
+    min-width: 300px;
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    background-color: $contrast_color;
+    text-align: center;
+    border-radius: 5px;
+
+    .location-search-box {
+        padding: 20px 30px;
+        background-color: $base_color_light10;
+        width: 100%;
+    }
+
+    .btn {
+        margin-top: 20px;
+        width: 30%;
+    }
+}

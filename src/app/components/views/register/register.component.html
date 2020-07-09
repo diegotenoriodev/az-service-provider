@@ -1,0 +1,113 @@
+<main role="main" class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form class="register-panel" (ngSubmit)="onSubmit()" [formGroup]="newUserForm">
+                    <h5>New User?</h5>
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                            placeholder="Enter first name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control"
+                            placeholder="Enter last name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-action">
+                            <button type="submit" class="btn btn-default"
+                                [disabled]="!newUserForm.valid">Submit</button>
+                        </div>
+                    </div>
+                    <small>
+                        <ul>
+                            <li class="error-message" [class.show]="!f.firstName.valid && f.firstName.touched">
+                                Inform your first name
+                            </li>
+                            <li class="error-message" [class.show]="!f.lastName.valid && f.lastName.touched">
+                                Inform your last name
+                            </li>
+                            <li class="error-message"
+                                [class.show]="!f.email.valid && f.email.errors.required && f.email.touched">
+                                Inform an email address
+                            </li>
+                            <li class="error-message"
+                                [class.show]="!f.email.valid && f.email.errors.email && f.email.touched">
+                                Inform a valid email address
+                            </li>
+                            <li class="error-message" [class.show]="!f.password.valid && f.password.touched">
+                                Inform your password
+                            </li>
+                            <li class="error-message"
+                                [class.show]="!f.confirmPassword.valid && f.confirmPassword.errors.required && f.confirmPassword.touched">
+                                Confirm your password
+                            </li>
+                            <li class="error-message"
+                                [class.show]="!f.confirmPassword.valid && f.confirmPassword.errors.mustMatch && f.confirmPassword.touched">
+                                Passwords must match
+                            </li>
+                        </ul>
+                    </small>
+                    <!-- <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" required [(ngModel)]="newUser.firstName" id="firstName"
+                            name="firstName" placeholder="Enter first name" #firstName="ngModel">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" required [(ngModel)]="newUser.lastName" id="lastName"
+                            name="lastName" placeholder="Enter last name" #lastName="ngModel">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email address</label>
+                        <input type="email" class="form-control" required [(ngModel)]="newUser.email" id="emailAddress"
+                            name="emailAddress" aria-describedby="emailHelp" placeholder="Enter email" #email="ngModel"
+                            email>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" required [(ngModel)]="newUser.password"
+                            name="password" id="password" placeholder="******" #password="ngModel">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" required [(ngModel)]="newUser.confirmPassword"
+                            name="confirmPassword" id="confirmPassword" placeholder="******" #confirmPassword="ngModel">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" [(ngModel)]="newUser.acceptTerms"
+                            name="acceptTerms" id="termsConditions">
+                        <label class="form-check-label" for="termsConditions">I Agree with the terms and
+                            conditions</label>
+                    </div> -->
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="login-options">
+                    <h5>Already have an account?</h5>
+
+                    <div class="form-action">
+                        <a type="button" class="btn btn-default" [routerLink]="['/login']">Login</a>
+                        <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-onfailure="onFailure"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

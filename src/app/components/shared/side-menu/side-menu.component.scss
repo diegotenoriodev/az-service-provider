@@ -1,0 +1,74 @@
+@import '../../../styles/colors.scss';
+
+.side-menu {
+    height: 100vh;
+    min-width: 250px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: $contrast_color;
+    color: $base_color;
+    overflow-y: auto;
+    transition: all .2s;
+
+    li, ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        color: $base_color;
+        font-family: "Roboto",sans-serif;
+        font-size: 14px;
+    }
+
+    ul.option-set {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid $overlay_color;
+
+        li {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        li:hover {
+            background-color: $overlay_color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .user-image {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .social {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-top: 1px solid $overlay_color;
+        
+        li {
+            display: inline-block;
+            padding: 5px 15px;
+            
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.side-menu.active {
+    left: 0;
+}

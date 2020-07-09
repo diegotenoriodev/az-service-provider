@@ -1,0 +1,14 @@
+<div class="overlay" [class.active]="_active" (click)="toggleActive()">
+    <div class="location-picker" [class.active]="_active" (click)="preventDefault($event)">
+        <h5>Select Your Location</h5>
+        <form class="location-search-box">
+            <div class="form-group mx-sm-1 mb-1">
+                <input type="text" #input placeholder="Inform your location" name="listLocation" id="listLocation"
+                    class="input-text list-box form-control location" value="{{locationName}}">
+            </div>
+            <div class="form-group">
+                <a class="btn btn-md btn-default-outline">Save</a>
+            </div>
+        </form>
+    </div>
+</div>

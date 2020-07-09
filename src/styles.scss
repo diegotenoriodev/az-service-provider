@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+/* stylelint-disable selector-list-comma-newline-after */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import './app/styles/colors.scss';
+@import './app/styles/forms.scss';
+
+.material-icons {
+    color: $base_color;
+}
+
+.btn-default-outline {
+    color: $base_color!important;
+    border: 1px solid $base_color;
+    background-color: $contrast_color;
+    cursor: pointer;
+}
+
+.btn-default-outline:hover {
+    color: $contrast_color!important;
+    border: 1px solid $contrast_color;
+    background-color: $base_color;
+}
+
+.btn-default {
+    color: $contrast_color!important;
+    border: 1px solid $contrast_color;
+    background-color: $base_color;
+    cursor: pointer;
+}
+
+.btn-default:hover {
+    color: $base_color!important;
+    border: 1px solid $base_color;
+    background-color: $contrast_color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
+
+#search-icon-header {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    #search-icon-header {
+        display: block;
+        margin: 2px 15px;
+    }
+}
+
+.h-250 {
+    height: 250px;
+}
+
+@media (min-width: 768px) {
+    .h-md-250 {
+        height: 250px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem $overlay_color;
+}
+
+.container {
+    max-width: 95%;
+}
+
+.main {
+    min-height: 100vh;
+    background-color: $base_color_light10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    height: 30vh;
+    background-color: $base_color_dark10;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay_color;
+    display: none;
+    z-index: 10;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.overlay.active {
+    display: block;
+}

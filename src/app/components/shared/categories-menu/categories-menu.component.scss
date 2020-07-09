@@ -1,0 +1,82 @@
+@import "../../../styles/colors.scss";
+
+.category-menu {
+    a {
+        color: unset;
+        border-radius: 5px;
+        transition: all 0.2s;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $contrast_color;
+        background-color: $base_color;
+        // box-shadow: 0 4px 8px 0 $overlay_color, 0 6px 20px 0 $overlay_color;
+
+        .material-icons {
+            color: $contrast_color;
+        }
+    }
+
+    .text:hover {
+        text-decoration: underline;
+    }
+}
+
+.card-img-top {
+    overflow: hidden;
+    max-height: 150px;
+}
+
+.category-link {
+    padding: 4px 2px;
+    display: block;
+    margin-right: 5px;
+
+    span {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    .material-icons {
+        font-size: 48px;
+    }
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}

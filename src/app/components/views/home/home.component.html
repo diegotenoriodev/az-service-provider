@@ -1,0 +1,9 @@
+<categories-menu [serviceProviderTypes]="serviceProviderTypes"></categories-menu>
+<main role="main" class="main">
+    <search-box [serviceProviderTypes]="serviceProviderTypes"  [location]="location"></search-box>
+
+    <div class="container providers-main-list">
+        <service-provider-cards *ngFor="let item of serviceProvidersTopTypes" [title]="item.name" [serviceProviders]="item.serviceProviders">
+        </service-provider-cards>
+    </div>
+</main>
